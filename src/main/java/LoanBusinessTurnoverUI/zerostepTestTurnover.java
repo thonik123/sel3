@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.time.Duration;
 import java.util.*;
 
-public class ZerostepTestTurnover {
+public class zerostepTestTurnover {
     private WebDriver driver;
     private Map<String, Object> vars;
     JavascriptExecutor js;
