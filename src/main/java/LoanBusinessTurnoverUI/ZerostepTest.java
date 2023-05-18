@@ -6,6 +6,8 @@ import org.junit.After;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -17,7 +19,7 @@ public class ZerostepTest {
     public void setUp() {
         driver = new ChromeDriver();
         js = (JavascriptExecutor) driver;
-        vars = new HashMap<String, Object>();
+        vars = new HashMap<>();
     }
     @After
     public void tearDown() {
@@ -29,7 +31,7 @@ public class ZerostepTest {
         Actions actions = new Actions(driver);
         driver.get("http://test-swarm.atb.su/sme-crm-external-requests/loan-business-turnover/");
         driver.manage().window().setSize(new Dimension(1526, 1012));
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(By.id(":r0:")).click();
         driver.findElement(By.id(":r0:")).sendKeys("Антон Ф.");
         driver.findElement(By.id(":r1:")).click();
