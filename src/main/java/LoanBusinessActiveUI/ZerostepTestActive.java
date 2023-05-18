@@ -1,17 +1,17 @@
-package LoanBusinessTurnoverUI;
+package LoanBusinessActiveUI;
 
-import org.junit.Test;
-import org.junit.Before;
 import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
-import java.util.*;
-import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
+import java.util.Map;
 
-public class ZerostepTest {
+public class ZerostepTestActive {
     private WebDriver driver;
     private Map<String, Object> vars;
     JavascriptExecutor js;
@@ -29,7 +29,7 @@ public class ZerostepTest {
     public void zerostep() throws InterruptedException {
         //Zero
         Actions actions = new Actions(driver);
-        driver.get("http://test-swarm.atb.su/sme-crm-external-requests/loan-business-turnover/");
+        driver.get("http://test-swarm.atb.su/sme-crm-external-requests/loan-business-active/");
         driver.manage().window().setSize(new Dimension(1526, 1012));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(By.id(":r0:")).click();
